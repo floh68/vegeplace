@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="flex justify-center items-center mx-16 my-20 bg-orange-500 rounded-full">
     <GoogleMap api-key="AIzaSyChXK5Iz8zTGhMk3hr0-BTzNjiLb42Snwo" style="width: 100%; height: 500px" :center="{lat: lat, lng: lng }" :zoom="15">
       <Marker :options="{ position: {lat: lat, lng: lng } }" />
     </GoogleMap>
