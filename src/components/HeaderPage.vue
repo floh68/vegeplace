@@ -52,12 +52,8 @@
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      menuIsOpen: false,
-    };
-  },
-};
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const menuIsOpen = ref(false);
 </script>
