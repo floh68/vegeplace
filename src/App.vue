@@ -3,7 +3,7 @@
 import FooterPage from './components/FooterPage.vue';
 //import googleMaps from './components/googleMaps.vue';
 import HeaderPage from './components/HeaderPage.vue';
-import TexteDefilant from './components/TexteDefilant.vue';
+//import TexteDefilant from './components/TexteDefilant.vue';
 import { RouterView } from 'vue-router';
 </script>
 

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="map"></div>
 </template>
 
@@ -38,3 +38,4 @@ onMounted(() => {
   document.head.appendChild(script);
 });
 </script>
+ -->
