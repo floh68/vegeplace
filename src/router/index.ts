@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../Pages/HomeView.vue';
-//import Contact from '../Pages/contact.vue';
+import profil from '../Pages/Profil.vue';
 import Panier from '../Pages/panier.vue';
 
 const router = createRouter({
@@ -17,9 +17,9 @@ const router = createRouter({
       component: Panier,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
+      path: '/profil',
+      name: 'profil',
+      component: profil,
     },
   ],
 });
