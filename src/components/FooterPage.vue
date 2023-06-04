@@ -49,7 +49,7 @@ import IconLinkedin from '@/components/icons/IconLinkedin.vue'
         <p class="text-center text-sm text-gray-100">
           <a href="#" class="hover:text-black">Termes et conditions d'utilisation</a> - 
           <a href="#" class="hover:text-black">Cookies</a> - 
-          <a href="#" class="hover:text-black">Mention légales</a>
+          <RouterLink to="/mentions" class="hover:text-black">Mention légales</RouterLink>
         </p>
       </div>
     </div>
