@@ -1,3 +1,7 @@
 <template>
-    cd
+    <br>
+    <br>
+    <br>
+    <br>
+    panier
 </template>
