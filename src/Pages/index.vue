@@ -10,8 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 import "swiper/css";
 const photos = [
-  "photo_1.webp",
   "photo_2.webp",
+  "photo_1.webp",
   "photo_3.webp",
 ]
 
@@ -93,6 +93,20 @@ const photos = [
 
   </div>
 
+  <div style="display: flex; justify-content: center;">
+    <button class="
+    bg-[#E05303]
+    text-white
+    rounded-tl-lg rounded-br-lg
+    border-t-4 border-b-4 border-[#FFA704]
+    px-4 py-1
+    hover:bg-[#FFA704]
+    hover:border-[#E05303]
+    transition-colors duration-300
+  ">
+      Plus de recettes
+    </button>
+  </div>
 
   <div class="flex-1 pt-4 flex items-center relative">
     <div class="bg-[#B3F274] h-6  absolute left-0 right-0">
