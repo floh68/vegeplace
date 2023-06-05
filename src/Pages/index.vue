@@ -6,19 +6,69 @@ import IconLove from '../components/icons/IconLove.vue';
 import file from '@/components/icons/file.vue';
 import IngredientsCardR from '@/components/IngredientsCardR.vue'
 import IngredientsCardL from '@/components/IngredientsCardL.vue'
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+const photos = [
+  "photo_1.webp",
+  "photo_2.webp",
+  "photo_3.webp",
+]
+
+
+
+
+
+
 </script>
 <template>
-  <div class=" flex py-4">
-    <div class="flex-1 flex items-center relative">
-      <div class="bg-green-500 h-4 rounded-r-lg absolute left-0 right-0"></div>
+  <!-- <div class="relative">
+    <img class="w-full h-[35vh] object-cover" src="../components/icones/main_couv_header.webp" alt="Image">
+    <p class="absolute bottom-0 left-0 right-0 text-center pb-4 text-6xl bg-white bg-opacity-50 mx-auto">Exposition</p>
+  </div> -->
+
+
+
+    <div class="overflow-hidden">
+      <Swiper class="h-[35vh] lg:h-[50vh]">
+        <SwiperSlide v-for="photo in photos" :key="photo">
+          <img :src="`src/components/imagescar/${photo}`" class="w-screen">
+        </SwiperSlide>
+      </Swiper>
     </div>
-    <div class="flex-1 relative py-4">
-      <h2 class="text-center text-2xl font-serif font-regular">Recette</h2>
+
+    <div class="flex justify-center items-center">
+      <p>glissez pour découvrir</p>
+      <img src="../components/icons/swipe.gif" alt="Autre image" class="w-1/6 lg:w-1/24">
+      
     </div>
-    <div class="flex-1 flex items-center relative">
-      <div class="bg-green-500 h-4 rounded-l-lg absolute left-0 right-0"></div>
-    </div>
-  </div>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
   <div class="flex-1 py-4 flex items-center relative">
@@ -37,14 +87,18 @@ import IngredientsCardL from '@/components/IngredientsCardL.vue'
     <RecipeCardL />
     <RecipeCardR />
     <RecipeCardL />
+
+
+
+
   </div>
 
 
-    <div class="flex-1 pt-4 flex items-center relative">
-      <div class="bg-[#B3F274] h-6  absolute left-0 right-0">
-        <p class="text-center">Ingrédients</p>
-      </div>
+  <div class="flex-1 pt-4 flex items-center relative">
+    <div class="bg-[#B3F274] h-6  absolute left-0 right-0">
+      <p class="text-center">Ingrédients</p>
     </div>
+  </div>
   <div class="bg-[#A6DC95]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
@@ -83,3 +137,8 @@ import IngredientsCardL from '@/components/IngredientsCardL.vue'
 
   <googleMaps />
 </template>
+
+
+
+
+

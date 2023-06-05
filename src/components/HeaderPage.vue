@@ -1,61 +1,77 @@
 <template>
-  <header class="flex items-center justify-between px-4 h-20 bg-[#E05303]">
-    <a href="/">
-      <h1 class="text-white text-2xl font-bold" @click=closeMenu>VegePlace</h1>
-    </a>
-    <nav class="hidden lg:flex items-center gap-4">
-      <ul class="flex gap-4">
-        <li>
-          <router-link to="/panier" class="block p-4 rounded-lg text-white" @click=closeMenu>
-            Panier
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/profil" class="block p-4 rounded-lg text-white" @click=closeMenu>
-            Profil
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/favori" class="block p-4 rounded-lg text-white" @click=closeMenu>
-            Favori
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-          <button class="h-5 w-8 flex flex-col justify-between lg:hidden text-black z-10" @click="menuIsOpen = !menuIsOpen">
-              <span class="block h-[2px] w-8 bg-white transition duration-300"
-                  :class="{ 'translate-y-[10px] rotate-45': menuIsOpen }"></span>
-              <span class="block h-[2px] w-full bg-white transition duration-300"
-                  :class="{ '-translate-y-[8px] -rotate-45': menuIsOpen }"></span>
-              <span class="block h-[2px] w-full bg-white transition duration-300" :class="{ 'hidden': menuIsOpen }"></span>
-          </button>
-    <nav
-      class="fixed z-10 inset-0 mt-20 flex flex-col justify-between py-12 px-6 bg-orange-500 lg:static lg:mt-0 lg:flex-row lg:flex-1"
-      :class="{ 'invisible opacity-0': !menuIsOpen, 'visible opacity-100': menuIsOpen }">
-      <ul class="flex flex-col gap-4">
-        <li>
-          <router-link to="/panier" class="block p-4 rounded-lg text-white text-4xl" @click=closeMenu>
-            Panier
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/profil" class="block p-4 rounded-lg text-white text-4xl" @click=closeMenu>
-            Profil
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/favori" class="block p-4 rounded-lg text-white text-4xl" @click=closeMenu>
-            Favori
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div>
+    <div class="bg-[#E05303]">
+      <nav class="
+          container
+          px-6
+          py-8
+          mx-auto
+          md:flex md:justify-between md:items-center
+        ">
+        <div class="flex items-center justify-between">
+          <RouterLink to="/" class="
+              text-xl
+              font-bold
+              text-gray-800
+              md:text-2xl
+              hover:text-[#B3F274]
+            ">
+            <img src="../components/icons/logo.png" class="w-1/2" alt="">
+          </RouterLink>
+          <!-- Mobile menu button -->
+          <div @click="showMenu = !showMenu" class="flex md:hidden">
+            <button type="button" class="
+                text-white
+                hover:text-[#B3F274]
+                focus:outline-none focus:text-gray-400
+                w-8 h-8
+              ">
+  <div style="display: flex; justify-content: center;">
+    <svg viewBox="0 0 24 24" class="w-12 h-12 fill-current" style="transform: scale(2); transform-origin: center;">
+      <path fill-rule="evenodd"
+        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+      </path>
+    </svg>
+  </div>
+
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <ul :class="showMenu ? 'flex' : 'hidden'" class="
+            flex-col
+            mt-8
+            space-y-4
+            md:flex
+            md:space-y-0
+            md:flex-row
+            md:items-center
+            md:space-x-10
+            md:mt-0
+          ">
+          <li class="text-sm font-bold text-white hover:text-[#B3F274]">
+            <RouterLink to="/profil">Profil</RouterLink>
+          </li>
+          <li class="text-sm font-bold text-white hover:text-[#B3F274]">
+            <RouterLink to="/panier">Panier</RouterLink>
+          </li>
+          <li class="text-sm font-bold text-white hover:text-[#B3F274]">
+            <RouterLink to="/favori">Favori</RouterLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-const closeMenu = () => { menuIsOpen.value = false; };
-const menuIsOpen = ref(false);
-
+<script lang="ts">
+export default {
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+};
 </script>
