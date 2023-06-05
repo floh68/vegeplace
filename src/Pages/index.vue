@@ -28,6 +28,7 @@ import IngredientsCardL from '@/components/IngredientsCardL.vue'
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- faire une boucle avec des redirect et idvue de recette pour rediriger vers la bonne recette -->
     <RecipeCardR />
     <RecipeCardL />
     <RecipeCardR />
@@ -46,6 +47,8 @@ import IngredientsCardL from '@/components/IngredientsCardL.vue'
     </div>
   <div class="bg-[#A6DC95]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <!-- faire une boucle pour afficher tous les ingrédients  -->
       <IngredientsCardL />
       <IngredientsCardR />
       <IngredientsCardL />
