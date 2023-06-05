@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-between px-4 h-20 bg-orange-500">
+  <header class="flex items-center justify-between px-4 h-20 bg-[#E05303]">
     <a href="/">
       <h1 class="text-white text-2xl font-bold" @click=closeMenu>VegePlace</h1>
     </a>
