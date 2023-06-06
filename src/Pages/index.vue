@@ -6,7 +6,10 @@ import IconLove from '../components/icons/IconLove.vue';
 import file from '@/components/icons/file.vue';
 import IngredientsCardR from '@/components/IngredientsCardR.vue'
 import IngredientsCardL from '@/components/IngredientsCardL.vue'
-import { Swiper, SwiperSlide } from "swiper/vue";
+import type { IngredientsResponse } from '@/pocketbase-types';
+import { allIngredients } from '@/backend';
+const ingredientListe:IngredientsResponse[] = await allIngredients()
+const unIngredient = ingredientListe[0]
 
 import "swiper/css";
 const photos = [
@@ -117,12 +120,7 @@ const photos = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
       <!-- faire une boucle pour afficher tous les ingrédients  -->
-      <IngredientsCardL />
-      <IngredientsCardR />
-      <IngredientsCardL />
-      <IngredientsCardR />
-      <IngredientsCardL />
-      <IngredientsCardR />
+      <IngredientsCardL v-for="unIngredient in ingredientListe" :key="unIngredient.id" v-bind="unIngredient" />
     </div>
   </div>
 
